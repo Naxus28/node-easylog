@@ -1,0 +1,19 @@
+{
+  "name": "logger",
+  "version": "1.0.0",
+  "description": "A simple node module that prints friendly messages to the console",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "logger",
+    "console.log"
+  ],
+  "author": "Gabriel Ferraz",
+  "license": "MIT",
+  "dependencies": {
+    "cli-color": "^1.1.0",
+    "pretty-error": "^2.0.2"
+  }
+}
