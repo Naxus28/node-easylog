@@ -1,8 +1,8 @@
 const config = require('./config');
-const ArgumentException = require('./helperClasses/Errors.js').ArgumentException;
+const ArgumentException = require('./helperClasses/Errors').ArgumentException;
 
 module.exports = {
-	log: function(message, logType, next) {
+	log: function(message, logType) {
 		if (logType) {
 			if (config.logTypes[logType]) {
 				message = config.logTypes[logType](message);
@@ -13,7 +13,7 @@ module.exports = {
 			}
 		}
 		console.log(message);
-		next && next();
+		return message;
 	}
 }
 
