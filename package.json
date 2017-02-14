@@ -1,5 +1,5 @@
 {
-  "name": "logger",
+  "name": "node-easylog",
   "version": "1.0.0",
   "description": "A simple node module that prints friendly messages to the console",
   "main": "src/index.js",
