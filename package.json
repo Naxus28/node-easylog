@@ -11,7 +11,15 @@
     "console.log"
   ],
   "author": "Gabriel Ferraz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naxus28/logger.git"
+  },
   "license": "MIT",
+  "bugs": {
+     "url": "https://github.com/naxus28/logger/issues"
+   },
+  "homepage": "https://github.com/naxus28/logger#readme",
   "dependencies": {
     "cli-color": "^1.1.0",
     "pretty-error": "^2.0.2"
