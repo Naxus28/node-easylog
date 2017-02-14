@@ -1,9 +1,6 @@
 let chai = require('chai');
 let expect = chai.expect;
-var should = chai.Should();
 let logger = require('../index.js');
-const config = require('../config');
-const ArgumentException = require('../helperClasses/Errors').ArgumentException;
 
 describe('logger.log()', () => {
 	
@@ -17,8 +14,8 @@ describe('logger.log()', () => {
 		expect(typeof result).to.equal('string');
 	});
 
-	it('should throw an exception of type "Argument Exception" be "undefined"', () => {
-		let result = logger.log('Hello World', 'fail');
+	it('should error out and return "undefined" if wrong argument is passed', () => {
+		let result = logger.log('Hello World', 'shouldFail');
 		expect(result).to.be.undefined;
 	});
 
