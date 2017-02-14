@@ -13,13 +13,13 @@
   "author": "Gabriel Ferraz",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/naxus28/logger.git"
+    "url": "git+https://github.com/naxus28/node-easylog.git"
   },
   "license": "MIT",
   "bugs": {
-     "url": "https://github.com/naxus28/logger/issues"
+     "url": "https://github.com/naxus28/node-easylog/issues"
    },
-  "homepage": "https://github.com/naxus28/logger#readme",
+  "homepage": "https://github.com/naxus28/node-easylog#readme",
   "dependencies": {
     "cli-color": "^1.1.0",
     "pretty-error": "^2.0.2"
