@@ -18,22 +18,22 @@ const exceptions = {
 
 // pretty error custom styles
 pe.appendStyle({
-   'pretty-error > header > title > kind': { background: 'none', color: 'red' },
-   'pretty-error > header > colon': { display: 'none' },
-   'pretty-error > header > message': {
-      color: 'red',
-      background: 'none',
-      padding: '0 1' 
-   },
-   'pretty-error > trace > item': {
-      marginLeft: 2,
-      bullet: '"<grey>o</grey>"'
-   },
-   'pretty-error > trace > item > header > pointer > file': { color: 'bright-cyan'},
-   'pretty-error > trace > item > header > pointer > colon': { color: 'cyan' },
-   'pretty-error > trace > item > header > pointer > line': { color: 'bright-cyan' },
-   'pretty-error > trace > item > header > what': { color: 'bright-white' },
-   'pretty-error > trace > item > footer > addr': { display: 'none' }
+  'pretty-error > header > title > kind': { background: 'none', color: 'red' },
+  'pretty-error > header > colon': { display: 'none' },
+  'pretty-error > header > message': {
+    color: 'red',
+    background: 'none',
+    padding: '0 1' 
+  },
+  'pretty-error > trace > item': {
+    marginLeft: 2,
+    bullet: '"<grey>o</grey>"'
+  },
+  'pretty-error > trace > item > header > pointer > file': { color: 'bright-cyan'},
+  'pretty-error > trace > item > header > pointer > colon': { color: 'cyan' },
+  'pretty-error > trace > item > header > pointer > line': { color: 'bright-cyan' },
+  'pretty-error > trace > item > header > what': { color: 'bright-white' },
+  'pretty-error > trace > item > footer > addr': { display: 'none' }
 });
 
 module.exports = {
