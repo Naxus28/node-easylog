@@ -3,8 +3,8 @@ const config = require('../config');
 
 class ExceptionsHandler {
 	constructor(exception, message) {
-   		this.exception = exception;
-   		this.message = message;
+ 		this.exception = exception;
+ 		this.message = message;
 	}
 
 	formatError() {
