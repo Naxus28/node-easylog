@@ -1,29 +1,31 @@
 const config = require('./config');
 const ArgumentException = require('./helperClasses/Errors').ArgumentException;
 
-const log = (params) => {
-	
-	let logCallBack = () => {
-		if (params.logType) {
-			if (config.logTypes[params.logType]) {
-				message = config.logTypes[params.logType](params.message);
+const logPromise = (params) => {
+	return new Promise( (resolve, reject) => {
+		setTimeout(() => {
+			if (params.logType && config.logTypes[params.logType]) {
+				resolve(params.message);
 			} else {
 				let exception = new ArgumentException(config.exceptions.argumentException.exceptionType, config.exceptions.argumentException.message);
-				return exception.toString();
+				reject(exception.toString());
 			}
-		}
+		}, 0);
+	});
+}
 
-		return console.log(message);
-	}
-
-	setTimeout(logCallBack, 0);
+const log = (params) => {
+	return logPromise(params).then(
+		(result) => {
+			console.log(config.logTypes[params.logType](result));
+			return result;
+		},
+		(error) => {
+			return error;
+		});
 };
-
 
 module.exports = {
 	log
 };
-
-
-
 

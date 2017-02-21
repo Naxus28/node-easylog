@@ -23,7 +23,7 @@ pe.appendStyle({
   'pretty-error > header > message': {
     color: 'red',
     background: 'none',
-    padding: '0 1' 
+    padding: '0 1'
   },
   'pretty-error > trace > item': {
     marginLeft: 2,
