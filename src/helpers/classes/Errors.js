@@ -18,6 +18,11 @@ class ExceptionsHandler {
 		return new Error(parsedObject); 
 	}
 
+	setError(exception, message) {
+ 		this.exception = exception;
+ 		this.message = message;
+	}
+
 	getError() {
 		let formattedError = this.formatError();
 		console.log(config.prettyError.render(formattedError));
