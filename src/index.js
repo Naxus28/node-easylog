@@ -7,7 +7,7 @@ const logPromise = (params) => {
 		setTimeout(() => {
 			let objKeysArray = Object.keys(params);
 
-			if (!objKeysArray.every(isValidKey)) {
+			if (!isValidKey(objKeysArray)) {
 				let exception = new ArgumentException(config.exceptions.argumentException.exceptionType, config.exceptions.argumentException.objPropertyError);
 				reject(exception.getError());
 			} else {
