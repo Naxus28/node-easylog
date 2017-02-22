@@ -12,11 +12,13 @@ class ExceptionsHandler {
 			exception: this.exception,
 			message: this.message
 		};
+
+		let parsedObject = util.inspect(errorObj); // util.inspect drills into the object and get key/value pairs (otherwise it prints [Object Object])
 		
-		return new Error(util.inspect(errorObj)); // need util.inspect to drill into the object and get key/value pairs (otherwise it prints [Object Object])
+		return new Error(parsedObject); 
 	}
 
-	toString() {
+	getError() {
 		let formattedError = this.formatError();
 		console.log(config.prettyError.render(formattedError));
 	}

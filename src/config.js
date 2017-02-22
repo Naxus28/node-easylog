@@ -6,7 +6,7 @@ const exceptions = {
   argumentException: {
     exceptionType: 'Argument Exception',
     logTypeError: '"logType" needs to be set to one of these values: "success", "error", "warn", or "notice"; i.e. log({"message": "hello world", "logType": "success"}). Any other value will throw an error',
-    objPropertyError: 'The "log" method takes an object with a mandatory key "message" and an optional key "logType". i.e. log({"message": "hello world", "logType": "success"}). Make sure you don\'t have any typos.'
+    objPropertyError: 'The "log" method takes an object with a mandatory key "message" and an optional key "logType". i.e. log({"message": "hello world", "logType": "success"}). Check for typos.'
   }
 };
 

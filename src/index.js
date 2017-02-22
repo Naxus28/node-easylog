@@ -1,5 +1,5 @@
 const config = require('./config');
-const validationUtilities = require('./helpers/utilities/validation');
+const isValidKey = require('./helpers/utilities/validation').isValidKey;
 const ArgumentException = require('./helpers/classes/Errors').ArgumentException;
 
 const logPromise = (params) => {
@@ -7,15 +7,15 @@ const logPromise = (params) => {
 		setTimeout(() => {
 			let objKeysArray = Object.keys(params);
 
-			if (!objKeysArray.every(validationUtilities.isValidKey)) {
+			if (!objKeysArray.every(isValidKey)) {
 				let exception = new ArgumentException(config.exceptions.argumentException.exceptionType, config.exceptions.argumentException.objPropertyError);
-				reject(exception.toString());
+				reject(exception.getError());
 			} else {
 				if (params.logType && config.logTypes[params.logType]) {
 					resolve(params.message);
 				} else {
 					let exception = new ArgumentException(config.exceptions.argumentException.exceptionType, config.exceptions.argumentException.logTypeError);
-					reject(exception.toString());
+					reject(exception.getError());
 				}
 			}
 		}, 0);
