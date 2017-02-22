@@ -1,5 +1,5 @@
 const config = require('./config');
-const isValidKey = require('./helpers/utilities/validation').isValidKey;
+const objKeysValid = require('./helpers/utilities/validation').objKeysValid;
 const ArgumentException = require('./helpers/classes/Errors').ArgumentException;
 
 const logPromise = (params) => {
@@ -7,7 +7,7 @@ const logPromise = (params) => {
 		setTimeout(() => {
 			let objKeysArray = Object.keys(params);
 
-			if (!isValidKey(objKeysArray)) {
+			if (!objKeysValid(objKeysArray)) {
 				let exception = new ArgumentException(config.exceptions.argumentException.exceptionType, config.exceptions.argumentException.objPropertyError);
 				reject(exception.getError());
 			} else {

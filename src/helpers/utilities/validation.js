@@ -4,11 +4,11 @@ let testObjKeys = function(element, index, array) {
   return config.logProperties.includes(element); 
 } 
 
-let isValidKey = function(objKeysArray) {
+let objKeysValid = function(objKeysArray) {
 	return objKeysArray.every(testObjKeys);
 }
 
 
 module.exports = {
-	isValidKey
+	objKeysValid
 };
