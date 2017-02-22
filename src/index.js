@@ -1,14 +1,22 @@
 const config = require('./config');
-const ArgumentException = require('./helperClasses/Errors').ArgumentException;
+const validationUtilities = require('./helpers/utilities/validation');
+const ArgumentException = require('./helpers/classes/Errors').ArgumentException;
 
 const logPromise = (params) => {
 	return new Promise( (resolve, reject) => {
 		setTimeout(() => {
-			if (params.logType && config.logTypes[params.logType]) {
-				resolve(params.message);
-			} else {
-				let exception = new ArgumentException(config.exceptions.argumentException.exceptionType, config.exceptions.argumentException.message);
+			let objKeysArray = Object.keys(params);
+
+			if (!objKeysArray.every(validationUtilities.isValidKey)) {
+				let exception = new ArgumentException(config.exceptions.argumentException.exceptionType, config.exceptions.argumentException.objPropertyError);
 				reject(exception.toString());
+			} else {
+				if (params.logType && config.logTypes[params.logType]) {
+					resolve(params.message);
+				} else {
+					let exception = new ArgumentException(config.exceptions.argumentException.exceptionType, config.exceptions.argumentException.logTypeError);
+					reject(exception.toString());
+				}
 			}
 		}, 0);
 	});

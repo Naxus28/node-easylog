@@ -1,5 +1,5 @@
 const util = require('util');
-const config = require('../config');
+const config = require('../../config');
 
 class ExceptionsHandler {
 	constructor(exception, message) {
@@ -18,7 +18,7 @@ class ExceptionsHandler {
 
 	toString() {
 		let formattedError = this.formatError();
-		console.log(config.pe.render(formattedError));
+		console.log(config.prettyError.render(formattedError));
 	}
 }
 

@@ -25,7 +25,7 @@ describe('logger.log()', () => {
 
 	});
 
-	it('should error out and return "undefined" if wrong argument is passed', () => {
+	it('should error out and display friendly error message and call stack', () => {
 		logger.log({'message': 'Hello World', 'logType': 'shouldFail'}).then(
 			(result) => {
 				expect(result).to.be.undefined;
