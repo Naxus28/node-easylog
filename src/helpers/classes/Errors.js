@@ -13,7 +13,7 @@ class ExceptionsHandler {
 			message: this.message
 		};
 
-		let parsedObject = util.inspect(errorObj); // util.inspect drills into the object and gets all key/value pairs (otherwise it prints [Object Object])
+		let parsedObject = util.inspect(errorObj); // util.inspect drills into the object and gets key/value pairs (otherwise it prints [Object Object])
 		
 		return new Error(parsedObject); 
 	}
