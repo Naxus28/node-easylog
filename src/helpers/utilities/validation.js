@@ -1,10 +1,10 @@
-var config = require('../../config');
+const config = require('../../config');
 
-var testObjKeys = function(element, index, array) { 
+let testObjKeys = function(element, index, array) { 
   return config.logProperties.includes(element); 
 } 
 
-var objKeysValid = function(objKeysArray) {
+let objKeysValid = function(objKeysArray) {
 	return objKeysArray.every(testObjKeys);
 }
 

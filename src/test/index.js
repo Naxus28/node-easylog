@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var logger = require('../index.js');
+let expect = require('chai').expect;
+let logger = require('../index.js');
 
 describe('logger.log()', () => {
 

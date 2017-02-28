@@ -1,12 +1,12 @@
-var config = require('./config');
-var objKeysValid = require('./helpers/utilities/validation').objKeysValid;
-var ArgumentException = require('./helpers/classes/Errors').ArgumentException;
+const config = require('./config');
+const objKeysValid = require('./helpers/utilities/validation').objKeysValid;
+const ArgumentException = require('./helpers/classes/Errors').ArgumentException;
 
-var logPromise = (params) => {
+const logPromise = (params) => {
 	return new Promise( (resolve, reject) => {
 		setTimeout(() => {
-			var objKeysArray = Object.keys(params);
-			var exception = new ArgumentException();
+			let objKeysArray = Object.keys(params);
+			let exception = new ArgumentException();
 
 			if (!objKeysValid(objKeysArray)) {
 				exception.setError(config.exceptions.argumentException.exceptionType, config.exceptions.argumentException.objPropertyError);
@@ -28,10 +28,10 @@ var logPromise = (params) => {
 	});
 }
 
-var log = (params) => {
+const log = (params) => {
 	return logPromise(params).then(
 		(result) => {
-			var logMsg = config.logTypes[params.logType] ? config.logTypes[params.logType](result) : result
+			let logMsg = config.logTypes[params.logType] ? config.logTypes[params.logType](result) : result
 			console.log(logMsg);
 			
 			return logMsg;

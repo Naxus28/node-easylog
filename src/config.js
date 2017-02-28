@@ -1,8 +1,8 @@
-var clc = require('cli-color');
-var PrettyError = require('pretty-error');
-var prettyError = new PrettyError();
+const clc = require('cli-color');
+let PrettyError = require('pretty-error');
+let prettyError = new PrettyError();
 
-var exceptions = {
+const exceptions = {
   argumentException: {
     exceptionType: 'Argument Exception',
     missingMsg: 'The "log" method takes a mandatory object with a property "message"; i.e. log({"message": "hello world"})',
@@ -11,12 +11,12 @@ var exceptions = {
   }
 };
 
-var logProperties = [
+const logProperties = [
   'message',
   'logType'
 ];
 
-var logTypes = {
+const logTypes = {
 	error: clc.red,
 	warn: clc.yellow,
 	notice: clc.blue,
