@@ -1,3 +1,5 @@
+'use strict';
+
 const config = require('../../config');
 
 let testObjKeys = function(element, index, array) { 

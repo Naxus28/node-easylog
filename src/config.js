@@ -1,6 +1,8 @@
+'use strict';
+
 const clc = require('cli-color');
-var PrettyError = require('pretty-error');
-var prettyError = new PrettyError();
+let PrettyError = require('pretty-error');
+let prettyError = new PrettyError();
 
 const exceptions = {
   argumentException: {
