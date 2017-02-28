@@ -1,7 +1,5 @@
-require('use-strict');
-
-let expect = require('chai').expect;
-let logger = require('../index.js');
+var expect = require('chai').expect;
+var logger = require('../index.js');
 
 describe('logger.log()', () => {
 

@@ -1,12 +1,10 @@
-require('use-strict');
+var config = require('../../config');
 
-const config = require('../../config');
-
-let testObjKeys = function(element, index, array) { 
+var testObjKeys = function(element, index, array) { 
   return config.logProperties.includes(element); 
 } 
 
-let objKeysValid = function(objKeysArray) {
+var objKeysValid = function(objKeysArray) {
 	return objKeysArray.every(testObjKeys);
 }
 

@@ -1,7 +1,5 @@
-require('use-strict');
-
-const util = require('util');
-const config = require('../../config');
+var util = require('util');
+var config = require('../../config');
 
 class ExceptionsHandler {
 	constructor(exception, message) {
@@ -10,12 +8,12 @@ class ExceptionsHandler {
 	}
 
 	formatError() {
-		let errorObj = {
+		var errorObj = {
 			exception: this.exception,
 			message: this.message
 		};
 
-		let parsedObject = util.inspect(errorObj); // util.inspect drills into the object and gets all key/value pairs (otherwise it prints [Object Object])
+		var parsedObject = util.inspect(errorObj); // util.inspect drills into the object and gets all key/value pairs (otherwise it prints [Object Object])
 		
 		return new Error(parsedObject); 
 	}
@@ -26,7 +24,7 @@ class ExceptionsHandler {
 	}
 
 	getError() {
-		let formattedError = this.formatError();
+		var formattedError = this.formatError();
 		console.log(config.prettyError.render(formattedError));
 	}
 }
