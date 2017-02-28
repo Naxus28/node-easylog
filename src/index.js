@@ -1,4 +1,5 @@
-'use strict';
+require('use-strict');
+
 const config = require('./config');
 const objKeysValid = require('./helpers/utilities/validation').objKeysValid;
 const ArgumentException = require('./helpers/classes/Errors').ArgumentException;

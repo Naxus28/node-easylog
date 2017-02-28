@@ -1,4 +1,4 @@
-'use strict';
+require('use-strict');
 
 const clc = require('cli-color');
 let PrettyError = require('pretty-error');
