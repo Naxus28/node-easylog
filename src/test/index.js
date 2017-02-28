@@ -1,7 +1,6 @@
 require('use-strict');
 
-let chai = require('chai');
-let expect = chai.expect;
+let expect = require('chai').expect;
 let logger = require('../index.js');
 
 describe('logger.log()', () => {
