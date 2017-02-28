@@ -1,7 +1,19 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
- - rbx-2
-# uncomment and edit the following line if your project needs to run something other than `rake`:
-# script: bundle exec rspec spec
+sudo: false
+language: node_js
+cache:
+  directories:
+    - node_modules
+##branches:
+  #only:
+ #   - master
+#notifications:
+ # email: false
+#before_script:
+#  - npm prune
+#script:
+#  - npm run cover
+ # - npm run check-coverage
+ # - npm run build
+#after_success:
+#  - npm run report-coverage
+#  - npm run semantic-release
