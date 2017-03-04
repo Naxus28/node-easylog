@@ -4,7 +4,8 @@
   "description": "A simple node module that prints friendly messages to the console",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/test/index.js -w"
+    "test": "mocha src/test/index.js -w",
+    "readme": "node ./node_modules/.bin/node-readme"
   },
   "keywords": [
     "logger",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "node-readme": "^0.1.9"
   }
 }
