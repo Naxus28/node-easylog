@@ -72,6 +72,8 @@ jspm_packages
 ##### Bower #####
 bower_components/
 
+##### Istanbul #####
+coverage
 
 ##### rules taken from https://gist.github.com/octocat/9257657 -- recommended by Git for ~/.gitignore_global #####
 # Packages #

@@ -6,12 +6,14 @@
   "scripts": {
     "commit": "git-cz",
     "test": "mocha src/test/index.js -w",
-    "test:single": "mocha src/test/index.js",
+    "test:single": "istanbul cover -x *.test.js _mocha -- -R spec src/test/index.js",
+    "check-coverage": "istanbul check-coverage --statements 94 --branches 70 --functions 100 --lines 94",
     "readme": "node ./node_modules/.bin/node-readme"
   },
   "keywords": [
     "logger",
-    "console.log"
+    "console.log",
+    "log"
   ],
   "author": "Gabriel Ferraz",
   "repository": {
@@ -33,6 +35,7 @@
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
     "ghooks": "^2.0.0",
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "node-readme": "^0.1.9"
   },
@@ -41,7 +44,7 @@
       "path": "cz-conventional-changelog"
     },
     "ghooks": {
-      "pre-commit": "npm run test:single"
+      "pre-commit": "npm run test:single && npm run check-coverage"
     }
   }
 }
