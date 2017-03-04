@@ -4,6 +4,7 @@
   "description": "A simple promise based node module that prints friendly messages asynchronously to the console",
   "main": "src/index.js",
   "scripts": {
+    "commit": "git-cz",
     "test": "mocha src/test/index.js -w",
     "readme": "node ./node_modules/.bin/node-readme"
   },
@@ -28,7 +29,14 @@
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "chai": "^3.5.0",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
     "mocha": "^3.2.0",
     "node-readme": "^0.1.9"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
