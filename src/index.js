@@ -34,7 +34,7 @@ const log = (params) => {
 			let logMsg = config.logTypes[params.logType] ? config.logTypes[params.logType](result) : result
 			console.log(logMsg);
 			
-			// return logMsg;
+			return logMsg;
 		},
 		(error) => {
 			return error;
