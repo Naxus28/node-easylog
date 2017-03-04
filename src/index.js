@@ -5,7 +5,7 @@ const ArgumentException = require('./helpers/classes/Errors').ArgumentException;
 const logPromise = (params) => {
 	return new Promise( (resolve, reject) => {
 		setTimeout(() => {
-			let objKeysArray = Object.keys(params);
+			// let objKeysArray = Object.keys(params);
 			let exception = new ArgumentException();
 
 			if (!objKeysValid(objKeysArray)) {
