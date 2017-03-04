@@ -5,6 +5,8 @@
 A simple promise based node module that prints friendly messages asynchronously to the console
 
 ![nodei.co](https://nodei.co/npm/node-easylog.png?downloads=true&downloadRank=true&stars=true)
+
+
 ![travis-status](https://img.shields.io/travis/naxus28/node-easylog.svg)
 ![stars](https://img.shields.io/github/stars/naxus28/node-easylog.svg)
 ![forks](https://img.shields.io/github/forks/naxus28/node-easylog.svg)
