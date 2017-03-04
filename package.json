@@ -1,7 +1,7 @@
 {
   "name": "node-easylog",
   "version": "1.4.2",
-  "description": "A simple promise based node module that prints friendly messages asynchronously to the console",
+  "description": "A promise based node module that prints friendly messages asynchronously to the console",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha src/test/index.js -w",
