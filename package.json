@@ -41,7 +41,7 @@
       "path": "cz-conventional-changelog"
     },
     "ghooks": {
-      "commit": "npm run test:single"
+      "pre-commit": "npm run test:single"
     }
   }
 }
