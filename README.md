@@ -2,8 +2,6 @@
 
 ![npm](https://img.shields.io/npm/v/node-easylog.svg) ![license](https://img.shields.io/npm/l/node-easylog.svg) ![github-issues](https://img.shields.io/github/issues/naxus28/node-easylog.svg)  ![Circle CI build status](https://circleci.com/gh/naxus28/node-easylog.svg?style=svg)
 
-A simple promise based node module that prints friendly messages asynchronously to the console
-
 ![nodei.co](https://nodei.co/npm/node-easylog.png?downloads=true&downloadRank=true&stars=true)
 
 ![travis-status](https://img.shields.io/travis/naxus28/node-easylog.svg)
