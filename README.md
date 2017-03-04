@@ -32,6 +32,7 @@ logger.log({'message': 'Hello World'}) // logs "Hello World" to the console
 ```
 
 _Log Types_
+
 The "log" method takes an optional second key "logType" whose accepted values are: "success", "error" , "warn", and "notice" 
 
 ```javascript
