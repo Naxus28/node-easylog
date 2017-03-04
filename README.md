@@ -25,19 +25,24 @@ A simple node module that prints friendly messages to the console
 ## Usage
 Node-easylog currently has only a "log" method that takes an object with a mandatory "message" key
 
-`var logger = require('node-easylog'); // require the module`
-`logger.log({'message': 'Hello World'}); // logs "Hello World" to the console`
+`**var logger = require('node-easylog');** // require the module`
+
+`**logger.log({'message': 'Hello World'});** // logs "Hello World" to the console`
 
 
 _Log Types_
 
 The "log" method takes an optional second key "logType" whose accepted values are: "success", "error" , "warn", and "notice" 
 
-`var logger = require('node-easylog');`
-`logger.log({'message': 'Hello World', 'logType': 'success'}) // logs "Hello World" in the green color`
-`logger.log({'message': 'Hello World', 'logType': 'error'}) // logs "Hello World" in the red color`
-`logger.log({'message': 'Hello World', 'logType': 'warn'}) // logs "Hello World" in the yellow color`
-`logger.log({'message': 'Hello World', 'logType': 'notice'}) // logs "Hello World" in the blue color` 
+`**var logger = require('node-easylog');**`
+
+`**logger.log({'message': 'Hello World', 'logType': 'success'});** // logs "Hello World" in the green color`
+
+`**logger.log({'message': 'Hello World', 'logType': 'error'});** // logs "Hello World" in the red color`
+
+`**logger.log({'message': 'Hello World', 'logType': 'warn'});** // logs "Hello World" in the yellow color`
+
+`**logger.log({'message': 'Hello World', 'logType': 'notice'});** // logs "Hello World" in the blue color` 
 
 
 ## Test
