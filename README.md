@@ -2,7 +2,7 @@
 
 ![npm](https://img.shields.io/npm/v/node-easylog.svg) ![license](https://img.shields.io/npm/l/node-easylog.svg) ![github-issues](https://img.shields.io/github/issues/naxus28/node-easylog.svg)  ![Circle CI build status](https://circleci.com/gh/naxus28/node-easylog.svg?style=svg)
 
-A simple node module that prints friendly messages to the console
+A simple promise based node module that prints friendly messages asynchronously to the console
 
 ![nodei.co](https://nodei.co/npm/node-easylog.png?downloads=true&downloadRank=true&stars=true)
 
@@ -25,24 +25,27 @@ A simple node module that prints friendly messages to the console
 ## Usage
 Node-easylog currently has only a "log" method that takes an object with a mandatory "message" key
 
-`**var logger = require('node-easylog');** // require the module`
+```javascript
+var logger = require('node-easylog'); // require the module
 
-`**logger.log({'message': 'Hello World'});** // logs "Hello World" to the console`
-
+logger.log({'message': 'Hello World'}) // logs "Hello World" to the console
+```
 
 _Log Types_
-
 The "log" method takes an optional second key "logType" whose accepted values are: "success", "error" , "warn", and "notice" 
 
-`**var logger = require('node-easylog');**`
+```javascript
+var logger = require('node-easylog');
 
-`**logger.log({'message': 'Hello World', 'logType': 'success'});** // logs "Hello World" in the green color`
+logger.log({'message': 'Hello World', 'logType': 'success'}) // logs "Hello World" in the green color
 
-`**logger.log({'message': 'Hello World', 'logType': 'error'});** // logs "Hello World" in the red color`
+logger.log({'message': 'Hello World', 'logType': 'error'}) // logs "Hello World" in the red color
 
-`**logger.log({'message': 'Hello World', 'logType': 'warn'});** // logs "Hello World" in the yellow color`
+logger.log({'message': 'Hello World', 'logType': 'warn'}) // logs "Hello World" in the yellow color
 
-`**logger.log({'message': 'Hello World', 'logType': 'notice'});** // logs "Hello World" in the blue color` 
+logger.log({'message': 'Hello World', 'logType': 'notice'}) // logs "Hello World" in the blue color
+
+``` 
 
 
 ## Test
